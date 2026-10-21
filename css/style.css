@@ -1724,3 +1724,66 @@ body,.page-content,.Intro,.content-section,.dark-section{background:#FFFFFF;colo
 .Intro-interests .interest-green{border-bottom-color:#00865F}
 .Intro-interests .interest-gold{border-bottom-color:#C49400}
 .focus-item-1{--focus-accent:#C51F35}.focus-item-2{--focus-accent:#193F84}.focus-item-3{--focus-accent:#0099B4}.focus-item-4{--focus-accent:#00865F}.focus-item-5{--focus-accent:#C49400}.focus-item-6{--focus-accent:#707070}
+
+
+/* Compact editorial credentials — replaces visual cards, retains content and tabs. */
+.page-content .credentials-tabs{margin:clamp(17px,2.3vw,29px) 0 15px;gap:7px}
+.page-content .credentials-tab{font-size:.83rem;padding:8px 12px;border-radius:3px}
+.page-content .credentials-panel{display:block}
+.page-content .credentials-panel[hidden]{display:none}
+.page-content .credential-item{
+ display:block;
+ padding:12px 5px 13px;
+ margin:0;
+ border:0;
+ border-bottom:1px solid #DEDEDE;
+ border-radius:0;
+ background:#FFFFFF;
+}
+.page-content .credential-item:first-child{border-top:1px solid #DEDEDE}
+.page-content .credential-item:hover{background:#F7F7F7;border-color:#DEDEDE}
+.page-content .credential-item::before{display:none}
+.page-content .credential-item>.credential-award-icon{display:none}
+.page-content .credential-item-body{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) auto;
+ column-gap:clamp(10px,2.5vw,30px);
+ row-gap:3px;
+ align-items:start;
+}
+.page-content .credential-item h3{
+ grid-column:1;
+ grid-row:1;
+ margin:0;
+ color:#171717;
+ font-size:clamp(.9rem,1.02vw,.98rem);
+ font-weight:600;
+ line-height:1.38;
+}
+.page-content .credential-issuer{
+ grid-column:1;
+ grid-row:2;
+ margin:0;
+ color:#505050!important;
+ font-size:.79rem;
+ font-weight:400;
+ letter-spacing:0;
+ line-height:1.4;
+ text-transform:none;
+}
+.page-content .credential-year{
+ grid-column:2;
+ grid-row:1/3;
+ margin:1px 0 0;
+ white-space:nowrap;
+ color:#666666!important;
+ font-size:.75rem;
+ line-height:1.4;
+ font-weight:500;
+ text-align:right;
+}
+@media(max-width:580px){
+ .page-content .credential-item-body{grid-template-columns:minmax(0,1fr);row-gap:3px}
+ .page-content .credential-year{grid-column:1;grid-row:3;text-align:left;margin-top:1px}
+ .page-content .credential-item{padding:11px 3px 12px}
+}
