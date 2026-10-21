@@ -1543,3 +1543,38 @@ body{background:#FFFFFF;color:#171717}
 .experience-standalone .site-footer{background:#FFFFFF;color:#171717}
 /* Strong dark text against white. Red is reserved for headings' accents, labels,
    interactive elements, and short emphasis—not long paragraphs. */
+
+
+/* Compact secondary sections — introduction intentionally unchanged */
+@media screen{
+ body:not(.experience-standalone) .page-content .content-section{
+   padding-top:clamp(42px,5vw,72px);
+   padding-bottom:clamp(44px,5.2vw,76px);
+ }
+ body:not(.experience-standalone) .page-content .content-section h2{
+   font-size:clamp(2.55rem,4.15vw,4.3rem);
+   line-height:1.12;
+ }
+ body:not(.experience-standalone) .page-content .content-section p,
+ body:not(.experience-standalone) .page-content .experience-responsibilities{
+   font-size:clamp(.92rem,1.06vw,1rem);
+   line-height:1.62;
+ }
+ body:not(.experience-standalone) .page-content .focus-item h3,
+ body:not(.experience-standalone) .page-content .experience-detail h4{
+   font-size:clamp(1.06rem,1.32vw,1.24rem);
+ }
+ body:not(.experience-standalone) .page-content .contact-intro{
+   font-size:clamp(1.3rem,1.85vw,1.75rem)!important;
+   line-height:1.5;
+ }
+}
+@media screen and (max-width:768px){
+ body:not(.experience-standalone) .page-content .content-section{
+   padding-top:42px;
+   padding-bottom:48px;
+ }
+ body:not(.experience-standalone) .page-content .content-section h2{
+   font-size:clamp(2.25rem,7.8vw,3.4rem);
+ }
+}
