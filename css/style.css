@@ -1492,3 +1492,54 @@ body:not(.experience-standalone) > .site-footer {
 @media (min-width: 769px) {
     body:not(.experience-standalone) .floating-nav { left: 38px; }
 }
+
+
+/* Black, White & Crimson Theme — layout-preserving update, Oct 2026.
+   Existing dimensions, grids, section order and interactivity remain unchanged. */
+:root{
+ --white:#FFFFFF;--black:#171717;--grey:#505050;--red:#C51F35;
+ --navy:#171717;--cyan:#C51F35;--green:#C51F35;
+ --gold:#C51F35;--gold-dark:#9D1830;--light-border:#DEDEDE;
+}
+body{background:#FFFFFF;color:#171717}
+.content-section,.page-content,.Intro,.dark-section{background:#FFFFFF;color:#171717}
+.focus-section,.languages-section,.contact-section{background:#FFFFFF!important;color:#171717!important}
+.focus-section::before,.languages-section::before,.contact-section::before{background:#FFFFFF!important}
+.focus-section::after,.languages-section::after,.contact-section::after{background:#DEDEDE!important}
+.focus-section h2,.languages-section h2,.contact-section h2,
+.focus-item h3,.language-cell h3{color:#171717!important}
+.focus-introduction,.languages-introduction,.contact-intro{color:#333333!important}
+.focus-item p{color:#424242!important}
+.language-level{color:#505050!important}
+.language-cell{border-color:#DEDEDE}
+.language-glyph,.focus-title-accent,.languages-title-accent,.contact-title-accent{color:#C51F35}
+.contact-primary,.contact-method{color:#171717!important;border-color:#DEDEDE!important}
+.contact-primary-address,.contact-method-value{color:#171717!important}
+.contact-primary .contact-method-label{color:#505050!important}
+.contact-method-label,.contact-link-arrow{color:#C51F35!important}
+.contact-primary:hover .contact-primary-address,.contact-method:hover .contact-method-value{color:#9D1830!important}
+.site-footer{background:#FFFFFF!important;color:#171717!important;border-top:1px solid #DEDEDE!important}
+.footer-name{color:#171717!important}
+.footer-copyright{color:#505050!important}
+.site-footer a,.site-footer .footer-back-top{color:#C51F35!important}
+.site-footer .footer-back-top:hover{color:#9D1830!important}
+.Intro-interests [class^="interest-"]{border-bottom-color:#C51F35}
+.Intro-button-primary{background:#C51F35;border-color:#C51F35;color:#FFFFFF}
+.Intro-button-secondary{background:#FFFFFF;border-color:#C51F35;color:#C51F35}
+.Intro-button-primary:hover{background:#9D1830;border-color:#9D1830;color:#FFFFFF}
+.credentials-tab[aria-selected="true"]{background:#C51F35;color:#FFFFFF;border-color:#C51F35}
+.credentials-tab:hover:not([aria-selected="true"]){background:#FFF8F9}
+.credential-item{border-color:#DEDEDE}
+.credential-item::before{background:#C51F35}
+.credential-item:hover{background:#FFF8F9;border-color:#C51F35}
+.language-stars .star-filled{color:#C51F35}
+.language-stars .star-empty{color:#707070}
+.experience-tag{border-color:#DEDEDE}
+.floating-nav{background:#FFFFFF;border-color:#DEDEDE}
+.floating-nav a:hover,.floating-nav a.active{color:#C51F35}
+.experience-standalone,.experience-standalone .experience-detail-page{background:#FFFFFF;color:#171717}
+.experience-standalone .experience-contact-links a:first-child{background:#C51F35;border-color:#C51F35;color:#FFFFFF}
+.experience-standalone .experience-contact-links a:first-child:hover{background:#9D1830;color:#FFFFFF}
+.experience-standalone .site-footer{background:#FFFFFF;color:#171717}
+/* Strong dark text against white. Red is reserved for headings' accents, labels,
+   interactive elements, and short emphasis—not long paragraphs. */
