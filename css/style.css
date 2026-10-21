@@ -1580,3 +1580,51 @@ body,.page-content,.Intro,.content-section,.dark-section{background:#FFFFFF;colo
  .page-content .content-section h2{font-size:clamp(2.12rem,7.2vw,3.15rem)}
 }
 /* Specificity matches older section rules; avoid additional global overrides. */
+
+
+/* October 2026 section refinements: consistent academics, compact contact,
+   and intentional five-colour underlines. Intro geometry is unchanged. */
+:root{
+ --accent-five-red:#C51F35;
+ --accent-five-navy:#193F84;
+ --accent-five-cyan:#0099B4;
+ --accent-five-green:#00865F;
+ --accent-five-gold:#C49400;
+}
+.Intro-interests .interest-red{border-bottom-color:var(--accent-five-red)}
+.Intro-interests .interest-navy{border-bottom-color:var(--accent-five-navy)}
+.Intro-interests .interest-cyan{border-bottom-color:var(--accent-five-cyan)}
+.Intro-interests .interest-green{border-bottom-color:var(--accent-five-green)}
+.Intro-interests .interest-gold{border-bottom-color:var(--accent-five-gold)}
+.focus-item-1{--focus-accent:var(--accent-five-red)}
+.focus-item-2{--focus-accent:var(--accent-five-navy)}
+.focus-item-3{--focus-accent:var(--accent-five-cyan)}
+.focus-item-4{--focus-accent:var(--accent-five-green)}
+.focus-item-5{--focus-accent:var(--accent-five-gold)}
+.focus-item-6{--focus-accent:#707070}
+/* Academic timeline typography: preserve grid, dates, connectors and contents. */
+.page-content .education-details h3{
+ font-size:clamp(1.07rem,1.32vw,1.27rem);
+ line-height:1.42;
+ margin-bottom:6px;
+}
+.page-content .education-date{font-size:clamp(.85rem,1vw,.96rem)}
+.page-content .education-school{font-size:clamp(.9rem,.99vw,.96rem);line-height:1.55}
+.page-content .education-note{font-size:clamp(.86rem,.95vw,.93rem);line-height:1.54;margin-top:5px}
+.page-content .education-intro>p:last-child{font-size:clamp(.9rem,.99vw,.96rem);line-height:1.62}
+.page-content .education-list{margin-top:clamp(20px,2.4vw,32px)}
+/* Smaller contact footprint: reduce header, whitespace and link rows. */
+.page-content .contact-section{padding-top:clamp(32px,3.8vw,54px);padding-bottom:clamp(36px,4vw,58px)}
+.page-content .contact-section h2{font-size:clamp(2.05rem,3.25vw,3.25rem);margin-bottom:12px;line-height:1.13}
+.page-content .contact-label{margin-bottom:10px}
+.page-content .contact-intro{font-size:clamp(1.05rem,1.35vw,1.3rem)!important;line-height:1.5;max-width:740px}
+.page-content .contact-details{margin-top:clamp(18px,2.2vw,30px)}
+.page-content .contact-primary{padding:13px 14px 15px 18px;gap:12px}
+.page-content .contact-method{padding:9px 12px 10px 18px}
+.page-content .contact-method-label{font-size:.73rem}
+.page-content .contact-primary-address,.page-content .contact-method-value{font-size:.83rem}
+@media screen and (max-width:768px){
+ .page-content .contact-section{padding-top:32px;padding-bottom:40px}
+ .page-content .contact-section h2{font-size:clamp(1.95rem,6.5vw,2.6rem)}
+ .page-content .education-details h3{font-size:1.08rem}
+}
