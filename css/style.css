@@ -1687,3 +1687,40 @@ body,.page-content,.Intro,.content-section,.dark-section{background:#FFFFFF;colo
  /* Skip links and floating navigation are interactive, not printable content. */
  .skip-link,.floating-nav,.mobile-menu-button{display:none!important}
 }
+
+/* Hover and accent consistency — 22 October 2026 */
+:root{--ui-hover:#F2F2F2;--ui-ink:#171717;--ui-muted:#505050;--ui-border:#DEDEDE;--ui-red:#C51F35;--ui-red-deep:#9D1830}
+.floating-nav a,.floating-nav a[href="#home"],.floating-nav a[href="#about"],.floating-nav a[href="#experience"],.floating-nav a[href="#research"],.floating-nav a[href="#languages"],.floating-nav a[href="#credentials"],.floating-nav a[href="#education"],.floating-nav a[href="#hobbies"],.floating-nav a[href="#contact"]{--nav-accent:#171717;--nav-ink:#FFFFFF}
+.floating-nav a:not(.active):hover,.floating-nav a:not(.active):focus-visible{background:#F2F2F2;color:#171717}
+.floating-nav a.active,.floating-nav a.active:hover,.floating-nav a.active:focus-visible{background:#171717;color:#FFFFFF}
+.floating-nav a:focus-visible{outline:2px solid #C51F35;outline-offset:2px}
+.credentials-tab{border-color:#DEDEDE;background:#FFFFFF;color:#171717}
+.credentials-tab[aria-selected="true"]{background:#171717;border-color:#171717;color:#FFFFFF}
+.credentials-tab:hover:not([aria-selected="true"]){background:#F2F2F2;border-color:#B8B8B8;color:#171717}
+.credentials-tab:focus-visible{outline:2px solid #C51F35;outline-offset:2px}
+.credential-item,.page-content .credential-item{border-color:#DEDEDE;background:#FFFFFF}
+.credential-item:hover,.page-content .credential-item:hover{background:#F7F7F7;border-color:#B8B8B8}
+.credential-issuer,.page-content .credential-issuer{color:#505050!important}
+.credential-item > .credential-award-icon{color:#505050}
+.credential-item::before,.page-content .credential-item::before{background:#B9B9B9}
+.credentials-title-accent,.languages-title-accent,.hobbies-title-accent,.education-title-accent,.experience-title-accent{color:#171717}
+.contact-title-accent{color:#C51F35}
+.hobby-icon,.page-content .hobby-icon{color:#505050}
+.language-glyph,.page-content .language-glyph{color:#333333}
+.language-stars .star-filled,.page-content .language-stars .star-filled{color:#3F3F3F}
+.page-content .contact-method-label{color:#505050}
+.page-content .contact-primary:hover .contact-primary-address,.page-content .contact-primary:focus-visible .contact-primary-address,.page-content .contact-method:hover .contact-method-value,.page-content .contact-method:focus-visible .contact-method-value{color:#171717}
+.page-content .contact-primary:hover,.page-content .contact-primary:focus-visible,.page-content .contact-method:hover,.page-content .contact-method:focus-visible{background:#F2F2F2;border-color:#B8B8B8}
+.site-footer .footer-back-top:hover{color:#171717}
+.Intro-button-primary:hover,.experience-standalone .experience-contact-links a:first-child:hover{background:#9D1830;border-color:#9D1830;color:#FFFFFF}
+.Intro-button-secondary:hover{background:#F2F2F2;border-color:#171717;color:#171717}
+.experience-standalone .experience-contact-links a:hover{background:#F2F2F2;border-color:#B8B8B8;color:#171717}
+.experience-standalone .experience-contact-links a:first-child:hover{background:#9D1830;border-color:#9D1830;color:#FFFFFF}
+.experience-standalone .experience-contact-links a:focus-visible{outline:2px solid #C51F35;outline-offset:3px}
+/* Five-colour underlines are intentional exceptions. */
+.Intro-interests .interest-red{border-bottom-color:#C51F35}
+.Intro-interests .interest-navy{border-bottom-color:#193F84}
+.Intro-interests .interest-cyan{border-bottom-color:#0099B4}
+.Intro-interests .interest-green{border-bottom-color:#00865F}
+.Intro-interests .interest-gold{border-bottom-color:#C49400}
+.focus-item-1{--focus-accent:#C51F35}.focus-item-2{--focus-accent:#193F84}.focus-item-3{--focus-accent:#0099B4}.focus-item-4{--focus-accent:#00865F}.focus-item-5{--focus-accent:#C49400}.focus-item-6{--focus-accent:#707070}
