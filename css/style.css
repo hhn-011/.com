@@ -1494,35 +1494,37 @@ body:not(.experience-standalone) > .site-footer {
 }
 
 
-/* Black, White & Crimson Theme — layout-preserving update, Oct 2026.
-   Existing dimensions, grids, section order and interactivity remain unchanged. */
-:root{
- --white:#FFFFFF;--black:#171717;--grey:#505050;--red:#C51F35;
- --navy:#171717;--cyan:#C51F35;--green:#C51F35;
- --gold:#C51F35;--gold-dark:#9D1830;--light-border:#DEDEDE;
+/* DESIGN SYSTEM — Black / White / Crimson, consolidated October 2026
+   Preserves existing component structure, page geometry, and full-screen intro. */
+:root {
+ --white:#FFFFFF; --black:#171717; --grey:#505050; --red:#C51F35;
+ --navy:#171717; --cyan:#C51F35; --green:#C51F35;
+ --gold:#C51F35; --gold-dark:#9D1830; --light-border:#DEDEDE;
 }
-body{background:#FFFFFF;color:#171717}
-.content-section,.page-content,.Intro,.dark-section{background:#FFFFFF;color:#171717}
-.focus-section,.languages-section,.contact-section{background:#FFFFFF!important;color:#171717!important}
-.focus-section::before,.languages-section::before,.contact-section::before{background:#FFFFFF!important}
-.focus-section::after,.languages-section::after,.contact-section::after{background:#DEDEDE!important}
+body,.page-content,.Intro,.content-section,.dark-section{background:#FFFFFF;color:#171717}
+.focus-section,.languages-section,.contact-section{background:#FFFFFF;color:#171717}
+.focus-section::before,.languages-section::before,.contact-section::before{background:#FFFFFF}
+.focus-section::after,.languages-section::after,.contact-section::after{background:#DEDEDE}
 .focus-section h2,.languages-section h2,.contact-section h2,
-.focus-item h3,.language-cell h3{color:#171717!important}
+.focus-item h3,.language-cell h3{color:#171717}
+.focus-title-accent,.languages-title-accent,.contact-title-accent,.language-glyph{color:#C51F35}
 .focus-introduction,.languages-introduction,.contact-intro{color:#333333!important}
 .focus-item p{color:#424242!important}
 .language-level{color:#505050!important}
 .language-cell{border-color:#DEDEDE}
-.language-glyph,.focus-title-accent,.languages-title-accent,.contact-title-accent{color:#C51F35}
-.contact-primary,.contact-method{color:#171717!important;border-color:#DEDEDE!important}
-.contact-primary-address,.contact-method-value{color:#171717!important}
-.contact-primary .contact-method-label{color:#505050!important}
-.contact-method-label,.contact-link-arrow{color:#C51F35!important}
-.contact-primary:hover .contact-primary-address,.contact-method:hover .contact-method-value{color:#9D1830!important}
-.site-footer{background:#FFFFFF!important;color:#171717!important;border-top:1px solid #DEDEDE!important}
-.footer-name{color:#171717!important}
-.footer-copyright{color:#505050!important}
-.site-footer a,.site-footer .footer-back-top{color:#C51F35!important}
-.site-footer .footer-back-top:hover{color:#9D1830!important}
+@media(max-width:1000px){.language-cell:nth-child(-n+2){border-bottom-color:#DEDEDE}}
+@media(max-width:460px){.language-cell{border-bottom-color:#DEDEDE}}
+.contact-primary,.contact-method{color:#171717;border-color:#DEDEDE}
+.contact-primary-address,.contact-method-value{color:#171717}
+.contact-primary .contact-method-label{color:#505050}
+.contact-method-label,.contact-link-arrow{color:#C51F35}
+.contact-primary:hover .contact-primary-address,.contact-method:hover .contact-method-value{color:#9D1830}
+.contact-section a:focus-visible{outline-color:#C51F35}
+.site-footer{background:#FFFFFF;color:#171717;border-top:1px solid #DEDEDE}
+.footer-name{color:#171717}
+.footer-copyright{color:#505050}
+.site-footer a,.site-footer .footer-back-top{color:#C51F35}
+.site-footer .footer-back-top:hover{color:#9D1830}
 .Intro-interests [class^="interest-"]{border-bottom-color:#C51F35}
 .Intro-button-primary{background:#C51F35;border-color:#C51F35;color:#FFFFFF}
 .Intro-button-secondary{background:#FFFFFF;border-color:#C51F35;color:#C51F35}
@@ -1532,7 +1534,7 @@ body{background:#FFFFFF;color:#171717}
 .credential-item{border-color:#DEDEDE}
 .credential-item::before{background:#C51F35}
 .credential-item:hover{background:#FFF8F9;border-color:#C51F35}
-.language-stars .star-filled{color:#C51F35}
+.language-stars .star-filled,.star-filled{color:#C51F35}
 .language-stars .star-empty{color:#707070}
 .experience-tag{border-color:#DEDEDE}
 .floating-nav{background:#FFFFFF;border-color:#DEDEDE}
@@ -1541,40 +1543,40 @@ body{background:#FFFFFF;color:#171717}
 .experience-standalone .experience-contact-links a:first-child{background:#C51F35;border-color:#C51F35;color:#FFFFFF}
 .experience-standalone .experience-contact-links a:first-child:hover{background:#9D1830;color:#FFFFFF}
 .experience-standalone .site-footer{background:#FFFFFF;color:#171717}
-/* Strong dark text against white. Red is reserved for headings' accents, labels,
-   interactive elements, and short emphasis—not long paragraphs. */
-
-
-/* Compact secondary sections — introduction intentionally unchanged */
-@media screen{
- body:not(.experience-standalone) .page-content .content-section{
+/* Shared secondary-page rhythm. No rules here target the introduction. */
+@media screen {
+ .page-content .content-section{
    padding-top:clamp(42px,5vw,72px);
    padding-bottom:clamp(44px,5.2vw,76px);
  }
- body:not(.experience-standalone) .page-content .content-section h2{
+ .page-content .content-section h2{
    font-size:clamp(2.35rem,3.75vw,3.9rem);
    line-height:1.12;
  }
- body:not(.experience-standalone) .page-content .content-section p,
- body:not(.experience-standalone) .page-content .experience-responsibilities{
+ .page-content .content-section p,
+ .page-content .experience-responsibilities{
    font-size:clamp(.9rem,.99vw,.96rem);
    line-height:1.62;
  }
- body:not(.experience-standalone) .page-content .focus-item h3,
- body:not(.experience-standalone) .page-content .experience-detail h4{
+ .page-content .focus-item h3,
+ .page-content .experience-detail h4{
    font-size:clamp(1rem,1.22vw,1.16rem);
  }
- body:not(.experience-standalone) .page-content .contact-intro{
+ .page-content .contact-intro{
    font-size:clamp(1.23rem,1.7vw,1.6rem)!important;
    line-height:1.5;
  }
+ .experience-standalone .experience-detail-page p,
+ .experience-standalone .experience-detail-page li{
+   font-size:clamp(.9rem,.99vw,.96rem);
+   line-height:1.62;
+ }
+ .experience-standalone .experience-detail-page h2{
+   font-size:clamp(2rem,3vw,3rem);
+ }
 }
 @media screen and (max-width:768px){
- body:not(.experience-standalone) .page-content .content-section{
-   padding-top:42px;
-   padding-bottom:48px;
- }
- body:not(.experience-standalone) .page-content .content-section h2{
-   font-size:clamp(2.12rem,7.2vw,3.15rem);
- }
+ .page-content .content-section{padding-top:42px;padding-bottom:48px}
+ .page-content .content-section h2{font-size:clamp(2.12rem,7.2vw,3.15rem)}
 }
+/* Specificity matches older section rules; avoid additional global overrides. */
